@@ -39,7 +39,7 @@ class SmartApp(object):
     self._devices = response.json()
     return self._devices
 
-  def getDeviceInfo(self, deviceId=None, options=['0x00', '0x01', '0x03', '0x04']):
+  def getDeviceInfo(self, deviceId=None, options=['0x00', '0x01', '0x02', '0x04', '0x09', '0x0D', '0x0E', '0x55', '0x18']):
     self.header.update({
       'auth': deviceId
     })

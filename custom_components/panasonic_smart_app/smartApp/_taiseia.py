@@ -1,28 +1,21 @@
 """ TaiSEIA 101 """
-from homeassistant.components.climate.const import (
-    HVAC_MODE_COOL, HVAC_MODE_HEAT, HVAC_MODE_HEAT_COOL, HVAC_MODE_DRY, HVAC_MODE_FAN_ONLY, HVAC_MODE_OFF,
-    SUPPORT_TARGET_TEMPERATURE, SUPPORT_FAN_MODE, SUPPORT_SWING_MODE, SUPPORT_PRESET_MODE,
-    PRESET_ECO, PRESET_NONE, PRESET_BOOST,
-    ATTR_CURRENT_TEMPERATURE, ATTR_FAN_MODE,
-    ATTR_HVAC_MODE, ATTR_SWING_MODE, ATTR_PRESET_MODE
+from homeassistant.components.humidifier.const import (
+    MODE_NORMAL, MODE_ECO, MODE_AWAY, MODE_BOOST, MODE_COMFORT, MODE_HOME, MODE_SLEEP, MODE_AUTO, MODE_BABY,
+    SUPPORT_MODES
 )
 
 COMMANDS_NAME = {
-    "0x00": "power",
-    "0x01": "mode",
-    "0x02": "fan_speed",
+    "0x00": "電源",
+    "0x01": "功能選擇",
+    "0x02": "時間到關",
     "0x03": "target_temperature",
-    "0x04": "current_temperature",
-    "0x08": "nanoeX",
-    "0x0F": "上下風向",
-    "0x11": "左右風向",
-    "0x1A": "急速",
-    "0x0B": "定時開機",
-    "0x0C": "定時關機",
-    "0x19": "動態感應",
-    "0x1B": "econavi",
-    "0x1F": "亮度",
-    "0x1E": "音量"
+    "0x04": "濕度設定",
+    "0x09": "風向設定",
+    "0x0D": "nanoe(清淨、脫臭)",
+    "0x0E": "風量設定",
+    "0x55": "時間到開",
+    "0x18": "操作提示音"
+   
 }
 
 COMMANDS_OPTIONS = {
@@ -31,10 +24,22 @@ COMMANDS_OPTIONS = {
         "1": "On"
     },
     "0x01": {
-        "0": HVAC_MODE_COOL,
-        "1": HVAC_MODE_DRY,
-        "2": HVAC_MODE_FAN_ONLY,
-        "3": HVAC_MODE_HEAT_COOL,
-        "4": HVAC_MODE_HEAT
+        "0": "連續除濕",
+        "1": "自動除濕",
+        "2": "防霉抑菌",
+        "3": "HVAC_MODE_HEAT_COOL",
+        "4": "衣物乾燥",
+        "5": "保持乾燥",
+        "6": "濕度設定",
+        "7": "空氣清淨"
+        #: [['連續除濕', 0], ['自動除濕', 1], ['防霉抑菌', 2], ['空氣清淨', 7], ['衣物乾燥', 4], ['保持乾燥', 5], ['濕度設定', 6]]},
+    },
+    "0x0E": {
+        "0": "自動",
+        "1": "急速",
+        "2": "標準",
+        "3": "靜音",
+
+        #[['自動', 0], ['急速', 1], ['標準', 2], ['靜音', 3]]}
     }
 }
