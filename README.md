@@ -33,7 +33,20 @@ climate:
 # Attention
 This project only test with `Panasonic air conditioner - PX series` which use `CZ-T007` wifi adapater. `CZ-T005`, `CZ-T006` or `PXGD` series might occurs some error.
 
+## Tested
+|  Series   | Model      | Adapater |
+| :-------: | ---------- | -------- |
+| PX Series | CS-RX28GA2 | CZ-T007  |
+| RX Series | CS-RX28GA2 |          |
+|     -     | CS-RX36GA2 |          |
+|     -     | CS-RX50GA2 |          |
+|     -     | CS-RX71GA2 |          |
 
+
+## Appreciate
+[@clspeter] for RX series testing.
+
+[@clspeter]: https://github.com/PhantasWeng/panasonic_smart_app/issues/5
 ---
 ## And..
 ### You can also...

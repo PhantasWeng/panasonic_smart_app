@@ -1,5 +1,10 @@
+
 # Panasonic Smart App
 This is a home assistant's integration for panasonic smart app.
+
+For complete info, please go to [Repository]'s README.
+
+[Repository]: https://github.com/PhantasWeng/panasonic_smart_app
 
 ## Why do I Need this?
 Due to Panasonic climates' api in Taiwan are separate to global.
